@@ -1,0 +1,9 @@
+{
+  "name": "notre-septembre",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "googleapis": "^150.0.1",
+    "resend": "^4.0.1"
+  }
+}
