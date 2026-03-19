@@ -1267,6 +1267,517 @@
         height:200px;
       }
     }
+    /* =========================
+   MOBILE ONLY FIX
+   À mettre TOUT en bas du <style>
+   ========================= */
+
+@media (max-width: 860px){
+
+  html, body{
+    overflow-x:hidden !important;
+    max-width:100% !important;
+  }
+
+  body{
+    overflow-x:hidden !important;
+  }
+
+  .container{
+    width:min(100% - 24px, 680px) !important;
+    margin-inline:auto !important;
+  }
+
+  /* NAVBAR */
+  :root{
+    --navh:118px !important;
+  }
+
+  header.site{
+    overflow:hidden !important;
+  }
+
+  nav.main{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    justify-content:flex-start !important;
+    gap:.55rem !important;
+    padding:.7rem .1rem .55rem !important;
+  }
+
+  .brand{
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+  .brand h1{
+    font-size:.98rem !important;
+    line-height:1.15 !important;
+    letter-spacing:.08em !important;
+    white-space:normal !important;
+    word-break:break-word !important;
+  }
+
+  .menu{
+    width:100% !important;
+    max-width:100% !important;
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    gap:.35rem !important;
+    padding:0 0 .2rem 0 !important;
+    scrollbar-width:none !important;
+    -webkit-overflow-scrolling:touch !important;
+  }
+
+  .menu::-webkit-scrollbar{
+    display:none !important;
+  }
+
+  .menu a{
+    flex:0 0 auto !important;
+    white-space:nowrap !important;
+    padding:.58rem .78rem !important;
+    font-size:.84rem !important;
+  }
+
+  /* INTRO */
+  .intro-grid{
+    grid-template-columns:1fr !important;
+    align-items:end !important;
+    gap:0 !important;
+    padding:20px 16px 28px !important;
+  }
+
+  .intro-left{
+    width:100% !important;
+    max-width:100% !important;
+    gap:.9rem !important;
+    align-items:flex-start !important;
+  }
+
+  .title{
+    font-size:clamp(1.7rem, 9vw, 2.6rem) !important;
+    line-height:1.03 !important;
+    max-width:10ch !important;
+  }
+
+  .deck{
+    max-width:100% !important;
+    width:100% !important;
+    font-size:1rem !important;
+    line-height:1.55 !important;
+  }
+
+  .cta-row{
+    width:100% !important;
+  }
+
+  .play{
+    min-width:0 !important;
+    width:100% !important;
+  }
+
+  .skip{
+    top:14px !important;
+    right:14px !important;
+  }
+
+  /* HERO */
+  #home.section-wrap{
+    padding:0 !important;
+  }
+
+  .hero{
+    min-height:calc(100svh - var(--navh)) !important;
+    min-height:calc(100vh - var(--navh)) !important;
+    align-items:flex-end !important;
+    background:none !important;
+  }
+
+  .hero-media{
+    inset:0 !important;
+  }
+
+  .hero-media img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:72% center !important;
+  }
+
+  .hero-gradient{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7,18,45,.10) 0%,
+        rgba(7,18,45,.26) 20%,
+        rgba(7,18,45,.66) 58%,
+        rgba(7,18,45,.92) 100%
+      ) !important;
+  }
+
+  .hero-stars{
+    opacity:.55 !important;
+  }
+
+  .hero-inner{
+    width:100% !important;
+    max-width:100% !important;
+    padding:0 0 28px 0 !important;
+    padding-top:clamp(250px, 42vh, 460px) !important;
+  }
+
+  .title-hero{
+    font-size:clamp(1.8rem, 8.2vw, 2.8rem) !important;
+    line-height:1.04 !important;
+    max-width:9ch !important;
+  }
+
+  .hero-date{
+    font-size:1rem !important;
+    line-height:1.45 !important;
+    max-width:100% !important;
+    margin-top:.7rem !important;
+  }
+
+  .hero-actions{
+    margin-top:1.1rem !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    gap:.75rem !important;
+    width:100% !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions .btn-ghost{
+    width:100% !important;
+    min-width:0 !important;
+    justify-content:center !important;
+    text-align:center !important;
+  }
+
+  /* SECTIONS */
+  .section-wrap{
+    padding:56px 0 !important;
+  }
+
+  h2.section-title{
+    font-size:1.5rem !important;
+    line-height:1.12 !important;
+    margin-bottom:.8rem !important;
+  }
+
+  p.lead{
+    font-size:1rem !important;
+  }
+
+  .grid,
+  .grid.two{
+    grid-template-columns:1fr !important;
+    gap:1rem !important;
+  }
+
+  .card{
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+  /* PROGRAMME / TIMELINE */
+  .prog-card{
+    padding:1rem !important;
+  }
+
+  .timeline{
+    padding-left:52px !important;
+    gap:.85rem !important;
+  }
+
+  .timeline::before{
+    left:21px !important;
+  }
+
+  .t-item{
+    grid-template-columns:1fr !important;
+    gap:.45rem !important;
+    padding:1rem .9rem 1rem 1rem !important;
+  }
+
+  .t-item::after{
+    left:-38px !important;
+    width:15px !important;
+    height:15px !important;
+  }
+
+  .t-time{
+    font-size:.9rem !important;
+  }
+
+  .t-title{
+    font-size:1rem !important;
+    line-height:1.35 !important;
+  }
+
+  /* DRESS CODE */
+  .audio-card{
+    grid-template-columns:48px 1fr !important;
+    gap:.8rem !important;
+    padding:.9rem !important;
+    min-width:0 !important;
+  }
+
+  .a-btn{
+    width:48px !important;
+    height:48px !important;
+    flex-shrink:0 !important;
+  }
+
+  .a-title{
+    font-size:.9rem !important;
+    line-height:1.25 !important;
+  }
+
+  .a-sub{
+    font-size:.95rem !important;
+  }
+
+  .a-time{
+    font-size:.88rem !important;
+  }
+
+  .dress-photo-card{
+    min-height:auto !important;
+  }
+
+  .dress-photo-wrap{
+    padding:.45rem !important;
+    min-height:auto !important;
+  }
+
+  .dress-photo-wrap img{
+    max-width:86% !important;
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+  }
+
+  /* FORMULAIRE */
+  form .row{
+    grid-template-columns:1fr !important;
+    gap:1rem !important;
+  }
+
+  input, select, textarea{
+    width:100% !important;
+    min-width:0 !important;
+    font-size:16px !important; /* évite le zoom iPhone */
+  }
+
+  .notice-alert{
+    font-size:.95rem !important;
+  }
+
+  #presenceFormContent > div[style*="display:flex"]{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    justify-content:flex-start !important;
+    gap:.75rem !important;
+  }
+
+  #presenceFormContent > div[style*="display:flex"] .hint{
+    margin-right:0 !important;
+  }
+
+  #presenceFormContent > div[style*="display:flex"] .btn{
+    width:100% !important;
+  }
+
+  #presenceSuccess{
+    min-height:unset !important;
+    padding:1.5rem 1rem !important;
+  }
+
+  /* VIDEO SIDE */
+  .video-side{
+    order:2 !important;
+  }
+
+  .video-side video{
+    min-height:260px !important;
+    height:auto !important;
+  }
+
+  /* HOTELS */
+  .hotel-card{
+    grid-template-columns:1fr !important;
+    gap:.9rem !important;
+    padding:.95rem !important;
+  }
+
+  .hotel-card .thumb{
+    order:-1 !important;
+  }
+
+  .hotel-card img{
+    width:100% !important;
+    aspect-ratio:16/10 !important;
+    object-fit:cover !important;
+  }
+
+  /* FINALE */
+  .finale-magic img[style]{
+    width:100% !important;
+    height:42vh !important;
+    min-height:280px !important;
+    object-fit:cover !important;
+  }
+
+  /* OVERLAY CONNEXION */
+  .party-panel{
+    width:calc(100vw - 16px) !important;
+    margin:12px auto !important;
+    border-radius:16px !important;
+  }
+
+  .party-header,
+  .party-body{
+    padding:1rem !important;
+  }
+
+  .pw-wrap{
+    padding:1rem .15rem !important;
+  }
+
+  .pw-row{
+    grid-template-columns:1fr !important;
+  }
+
+  .pw-row .btn{
+    width:100% !important;
+  }
+
+  .tabs{
+    gap:.45rem !important;
+  }
+
+  .tabs button{
+    width:100% !important;
+  }
+
+  .flash-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .flash-grid video{
+    height:220px !important;
+  }
+
+  .rappel-grid{
+    grid-template-columns:1fr !important;
+  }
+}
+
+@media (max-width: 520px){
+  :root{
+    --navh:112px !important;
+  }
+
+  .container{
+    width:calc(100vw - 20px) !important;
+  }
+
+  .brand h1{
+    font-size:.9rem !important;
+    letter-spacing:.07em !important;
+  }
+
+  .menu a{
+    font-size:.79rem !important;
+    padding:.52rem .68rem !important;
+  }
+
+  .title{
+    font-size:clamp(1.55rem, 8.6vw, 2.2rem) !important;
+    max-width:9ch !important;
+  }
+
+  .deck{
+    font-size:.97rem !important;
+  }
+
+  .hero-inner{
+    padding-top:clamp(230px, 38vh, 400px) !important;
+  }
+
+  .title-hero{
+    font-size:clamp(1.55rem, 8vw, 2.3rem) !important;
+    max-width:8ch !important;
+  }
+
+  .hero-date{
+    font-size:.94rem !important;
+  }
+
+  h2.section-title{
+    font-size:1.34rem !important;
+  }
+
+  .audio-card{
+    grid-template-columns:44px 1fr !important;
+  }
+
+  .a-btn{
+    width:44px !important;
+    height:44px !important;
+  }
+
+  .a-title{
+    font-size:.84rem !important;
+  }
+
+  .a-sub,
+  .a-time{
+    font-size:.88rem !important;
+  }
+
+  .flash-grid video{
+    height:200px !important;
+  }
+
+  footer.section-wrap{
+    padding:34px 0 !important;
+  }
+}
+
+@media (max-width: 390px){
+  .container{
+    width:calc(100vw - 16px) !important;
+  }
+
+  .brand h1{
+    font-size:.82rem !important;
+  }
+
+  .menu a{
+    font-size:.75rem !important;
+    padding:.48rem .62rem !important;
+  }
+
+  .title{
+    font-size:1.45rem !important;
+  }
+
+  .title-hero{
+    font-size:1.45rem !important;
+  }
+
+  .hero-date{
+    font-size:.9rem !important;
+  }
+}
   </style>
 </head>
 <body class="intro-active">
