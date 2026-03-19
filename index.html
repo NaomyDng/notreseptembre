@@ -10,7 +10,6 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/cover-1200x630.jpg">
   <meta name="twitter:card" content="summary_large_image">
-
   <link rel="preload" as="image" href="assets/cover-illustration.webp" fetchpriority="high">
   <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
   <link rel="preload" as="image" href="assets/dresscode-photo.webp">
@@ -21,11 +20,9 @@
   <link rel="preload" as="audio" href="assets/dresscode-02.m4a">
   <link rel="preload" as="audio" href="assets/dresscode-03.m4a">
   <link rel="preload" as="audio" href="assets/dresscode-04.m4a">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <style>
     :root{
       --night:#07122d;
@@ -46,7 +43,6 @@
       --danger:#ff6b6b;
       --danger-soft:rgba(255,107,107,.16);
     }
-
     *{margin:0;padding:0;box-sizing:border-box}
     html,body{height:100%}
     html{
@@ -76,13 +72,11 @@
     p{text-align:justify;text-justify:inter-word}
     li{text-align:justify;text-justify:inter-word}
     .hint,.a-sub,.t-sub{text-align:justify;text-justify:inter-word}
-
     :focus-visible{
       outline:2px solid rgba(231,214,170,.70);
       outline-offset:3px;
       border-radius:10px;
     }
-
     .btn{
       position:relative;
       overflow:hidden;
@@ -119,7 +113,6 @@
     }
     @keyframes shine{to{transform:translateX(130%)}}
     .btn:disabled{opacity:.65;cursor:not-allowed;transform:none}
-
     .btn-ghost{
       position:relative;
       overflow:hidden;
@@ -157,16 +150,13 @@
       .btn:active{transform:translateY(-1px) scale(.99)}
       .btn-ghost:active{transform:translateY(-1px) scale(.99)}
     }
-
     hr.divider{
       border:0;height:1px;
       background:linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
       margin:0;
     }
-
     body.intro-active #site{opacity:0;pointer-events:none}
     #site{opacity:1;transition:opacity .45s var(--ease)}
-
     #intro{position:fixed;inset:0;z-index:9999;overflow:hidden;background:#000}
     #intro .cover{
       position:absolute;inset:0;width:100%;height:100%;
@@ -213,7 +203,6 @@
     .deck strong{color:rgba(231,214,170,.95)}
     .cta-row{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap}
     .play{min-width:260px}
-
     #trailer{
       position:absolute;inset:0;
       width:100%;height:100%;
@@ -222,7 +211,6 @@
       transition:opacity .35s var(--ease)
     }
     #trailer.playing{opacity:1}
-
     .skip{position:absolute;top:16px;right:16px;z-index:4}
     .skip a{
       color:rgba(236,240,255,.86);
@@ -232,17 +220,14 @@
       transition:color .2s var(--ease),border-bottom-color .2s var(--ease);
     }
     .skip a:hover{color:#fff;border-bottom-color:#fff}
-
     .evap{animation:evaporate .6s var(--ease) forwards}
     @keyframes evaporate{
       0%{opacity:1;filter:blur(0);transform:translateY(0)}
       70%{opacity:.38;filter:blur(2px);transform:translateY(-8px)}
       100%{opacity:0;filter:blur(7px);transform:translateY(-14px)}
     }
-
     .fade-out{opacity:0;transition:opacity .55s var(--ease)}
     .hide{display:none}
-
     header.site{
       position:sticky;top:0;z-index:50;
       background:linear-gradient(180deg, rgba(7,18,45,.94), rgba(7,18,45,.58) 60%, rgba(7,18,45,0));
@@ -266,7 +251,6 @@
         linear-gradient(90deg, rgba(7,18,45,.88) 0%, rgba(7,18,45,.54) 46%, rgba(7,18,45,.24) 62%, rgba(7,18,45,0) 100%);
       opacity:.9;
     }
-
     nav.main{
       position:relative;
       z-index:1;
@@ -279,7 +263,6 @@
       text-transform:uppercase;
       color:rgba(255,255,255,.90);
     }
-
     .menu{display:flex;gap:.2rem;flex-wrap:wrap}
     .menu a{
       position:relative;
@@ -329,7 +312,6 @@
       .menu{max-width:62vw}
       .menu a{padding:.5rem .75rem;font-size:.88rem}
     }
-
     section{scroll-margin-top:var(--navh)}
     .section-wrap{
       position:relative;
@@ -339,7 +321,6 @@
     .section-mid{background:linear-gradient(180deg, var(--mid) 0%, #0d204e 100%)}
     .section-light{background:linear-gradient(180deg, var(--light) 0%, #122a58 100%)}
     #home.section-wrap{padding:0}
-
     .hero{
       position:relative;
       min-height:calc(100vh - var(--navh));
@@ -421,7 +402,6 @@
     @media(max-width:420px){
       .hero-inner{ padding-top:clamp(230px,33vh,360px); }
     }
-
     .card{
       position:relative;
       background:linear-gradient(180deg, var(--glass), var(--glass2));
@@ -438,11 +418,9 @@
         box-shadow:0 28px 95px rgba(0,0,0,.62),0 0 0 1px rgba(231,214,170,.10) inset;
       }
     }
-
     .grid{display:grid;gap:1.1rem}
     .grid.two{grid-template-columns:1fr 1fr}
     @media(max-width:860px){.grid.two{grid-template-columns:1fr}}
-
     h2.section-title{
       font-family:'Cinzel Decorative',serif;
       font-size:2rem;
@@ -451,11 +429,9 @@
       margin-bottom:.8rem;
     }
     p.lead{color:rgba(223,230,255,.82);margin:.2rem 0 1.1rem;font-size:1.1rem}
-
     #presence .grid{align-items:stretch}
     form .row{display:grid;gap:1rem;grid-template-columns:1fr}
     @media(min-width:760px){form .row{grid-template-columns:1fr 1fr}}
-
     input,select,textarea{
       width:100%;
       padding:1rem;
@@ -476,7 +452,6 @@
     label{color:rgba(236,240,255,.86);display:inline-block;margin-bottom:.35rem;letter-spacing:.02em}
     .hint{color:rgba(223,230,255,.70);font-size:.98rem;line-height:1.45}
     select option{color:#0b1020}
-
     .notice-alert{
       margin:0 0 1rem 0;
       padding:.9rem 1rem;
@@ -494,7 +469,6 @@
     .form-status-error{color:#ffd0d0}
     .form-status-success{color:#d8f5d8}
     .form-status-loading{color:rgba(231,214,170,.92)}
-
     .hp-field{
       position:absolute !important;
       left:-9999px !important;
@@ -504,7 +478,6 @@
       opacity:0 !important;
       pointer-events:none !important;
     }
-
     .video-side{
       overflow:hidden;
       border-radius:16px;
@@ -558,7 +531,6 @@
       }
     }
     @media(max-width:860px){.video-side video{min-height:320px}}
-
     .hotel-card{
       text-decoration:none;color:inherit;
       display:grid;
@@ -583,7 +555,6 @@
       .hotel-card{grid-template-columns:1fr}
       .hotel-card .thumb{order:-1}
     }
-
     .badge{
       position:relative;
       display:inline-flex;align-items:center;gap:.5rem;
@@ -617,7 +588,6 @@
       50%{transform:translateX(20%)}
       100%{transform:translateX(110%)}
     }
-
     .timeline{
       position:relative;
       display:grid;
@@ -717,7 +687,6 @@
       color:rgba(255,255,255,.92);
     }
     .t-sub{margin-top:.35rem;color:rgba(223,230,255,.74);font-size:1.05rem}
-
     .prog-card{position:relative;overflow:hidden;padding:1.1rem}
     .prog-media{position:absolute;inset:0;z-index:0}
     .prog-media video{
@@ -739,7 +708,6 @@
         linear-gradient(180deg, rgba(7,18,45,.70) 0%, rgba(7,18,45,.82) 55%, rgba(7,18,45,.92) 100%);
     }
     .prog-content{position:relative;z-index:1}
-
     .audio-grid{display:grid;gap:.9rem}
     .audio-card{
       display:grid;
@@ -792,7 +760,6 @@
     }
     .a-fill{height:100%;width:0%;background:linear-gradient(90deg, rgba(231,214,170,.95), rgba(255,255,255,.60))}
     .a-time{margin-top:.4rem;color:rgba(223,230,255,.68);font-size:.95rem;letter-spacing:.04em}
-
     .dress-photo-card{
       padding:0;
       overflow:hidden;
@@ -845,7 +812,6 @@
     @media(max-width:520px){
       .dress-photo-wrap img{max-width:82%}
     }
-
     .finale-magic{
       position:relative;
       overflow:hidden;
@@ -901,7 +867,6 @@
       45%{transform:scale(1.015);opacity:.85}
       100%{transform:scale(.985);opacity:.0}
     }
-
     #partyOverlay{
       position:fixed;inset:0;z-index:10000;display:none;
       background:rgba(7,14,35,.92);
@@ -947,7 +912,6 @@
     }
     .pane{display:none}
     .pane.show{display:block}
-
     .pw-wrap{padding:2rem 1.4rem}
     .pw-card{
       max-width:520px;margin-inline:auto;
@@ -985,7 +949,6 @@
       60%{transform:translateX(-4px)}
       80%{transform:translateX(4px)}
     }
-
     .flash-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
     @media(max-width:1024px){.flash-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:600px){.flash-grid{grid-template-columns:1fr}}
@@ -997,7 +960,6 @@
       border:1px solid rgba(255,255,255,.12)
     }
     @media(max-width:420px){.flash-grid video{height:220px}}
-
     .rappel-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
     @media(max-width:900px){.rappel-grid{grid-template-columns:1fr}}
     .rappel-card{
@@ -1024,7 +986,6 @@
     .rappel-card p{color:rgba(223,230,255,.78);line-height:1.5}
     .rappel-card ul{margin:.65rem 0 0;padding-left:1.1rem;color:rgba(223,230,255,.78)}
     .rappel-card li{margin:.35rem 0}
-
     .rappel-wide{
       margin-top:1rem;
       border:1px solid rgba(255,255,255,.12);
@@ -1048,7 +1009,6 @@
       margin-bottom:.5rem;
     }
     .rappel-wide p{color:rgba(236,240,255,.84);line-height:1.6}
-
     footer.section-wrap{
       padding:44px 0 !important;
       border-top:1px solid rgba(255,255,255,.08);
@@ -1056,14 +1016,12 @@
       text-align:center
     }
     footer strong{color:rgba(231,214,170,.90)}
-
     @media (prefers-reduced-motion: reduce){
       html{scroll-behavior:auto}
       *{scroll-behavior:auto !important}
       .btn::after,.btn-ghost::after,.badge::after{animation:none !important;opacity:0 !important}
       .card,.t-item,.audio-card,.rappel-card,.rappel-wide,.hotel-card,.menu a,.prog-media video,.video-side video,.finale-magic img,.finale-magic::before,.finale-magic::after{transition:none !important}
     }
-
     @media(max-width:520px){
       .section-wrap{padding:clamp(56px,8vw,96px) 0}
       #home.section-wrap{padding:0}
@@ -1075,7 +1033,6 @@
   <div id="intro" role="dialog" aria-label="Intro du site" aria-modal="true">
     <img class="cover" src="assets/cover-illustration.webp" alt="Affiche illustrée du couple" fetchpriority="high" decoding="async"/>
     <div class="scrim" aria-hidden="true"></div>
-
     <div class="intro-grid">
       <div class="intro-left" id="introLeft">
         <h1 class="title">Notre rêve<br>devient réalité</h1>
@@ -1095,15 +1052,12 @@
       </div>
       <div></div>
     </div>
-
     <div class="skip"><a href="#" id="skipLink" aria-label="Passer la vidéo">Passer</a></div>
-
     <video id="trailer" playsinline preload="auto" poster="assets/intro-poster.jpg">
       <source src="assets/trailer.mp4" type="video/mp4" />
       <source src="assets/trailer.webm" type="video/webm" />
     </video>
   </div>
-
   <div id="site">
     <header class="site" aria-label="Barre de navigation">
       <nav class="main container" aria-label="Navigation principale">
@@ -1118,7 +1072,6 @@
         </div>
       </nav>
     </header>
-
     <section id="home" class="section-wrap section-dark">
       <div class="hero">
         <div class="hero-media">
@@ -1138,9 +1091,7 @@
         </div>
       </div>
     </section>
-
     <hr class="divider"/>
-
     <section id="programme" class="section-wrap section-mid">
       <div class="container">
         <h2 class="section-title">Programme-VENDREDI</h2>
@@ -1187,9 +1138,7 @@
         </div>
       </div>
     </section>
-
     <hr class="divider"/>
-
     <section id="dresscode" class="section-wrap section-light">
       <div class="container">
         <h2 class="section-title">Dress code</h2>
@@ -1210,7 +1159,6 @@
                 </div>
                 <audio preload="auto" src="assets/dresscode-01.m4a"></audio>
               </div>
-
               <div class="audio-card">
                 <button class="a-btn" type="button" aria-label="Lire le vocal Dress code 2">
                   <svg class="a-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -1225,7 +1173,6 @@
                 </div>
                 <audio preload="auto" src="assets/dresscode-02.m4a"></audio>
               </div>
-
               <div class="audio-card">
                 <button class="a-btn" type="button" aria-label="Lire le vocal Dress code 3">
                   <svg class="a-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -1240,7 +1187,6 @@
                 </div>
                 <audio preload="auto" src="assets/dresscode-03.m4a"></audio>
               </div>
-
               <div class="audio-card">
                 <button class="a-btn" type="button" aria-label="Lire le vocal Dress code 4">
                   <svg class="a-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -1257,7 +1203,6 @@
               </div>
             </div>
           </div>
-
           <div class="card dress-photo-card">
             <div class="dress-photo-wrap">
               <img src="assets/dresscode-photo.webp" alt="Inspiration dress code" loading="eager" decoding="async">
@@ -1267,85 +1212,94 @@
         </div>
       </div>
     </section>
-
     <hr class="divider"/>
-
     <section id="presence" class="section-wrap section-mid">
       <div class="container">
         <h2 class="section-title">Confirmer votre présence</h2>
         <div class="grid two">
           <form id="presenceForm" class="card" style="padding:1.2rem" novalidate autocomplete="off">
-            <p class="notice-alert">L’INVITÉ N’INVITE PAS ET LES ENFANTS NE SONT PAS CONVIÉS.</p>
-
-            <div class="hp-field" aria-hidden="true">
-              <label for="website">Website</label>
-              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            <div id="presenceFormContent">
+              <p class="notice-alert">L’INVITÉ N’INVITE PAS ET LES ENFANTS NE SONT PAS CONVIÉS.</p>
+              <div class="hp-field" aria-hidden="true">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+              <div class="row">
+                <div>
+                  <label for="fullName">Nom complet</label>
+                  <input id="fullName" name="fullName" required autocomplete="name" placeholder="Votre nom complet" />
+                </div>
+                <div>
+                  <label for="phone">Téléphone</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+32 ..." />
+                </div>
+              </div>
+              <div class="row" style="margin-top:1rem">
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="exemple@mail.com" />
+                </div>
+                <div>
+                  <label for="attendance">Présence</label>
+                  <select id="attendance" name="attendance" required>
+                    <option value="">Choisir…</option>
+                    <option value="matin">Cérémonie religieuse (11h)</option>
+                    <option value="soir">Soirée (19h)</option>
+                    <option value="journee">Toute la journée (11h + 19h)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row" style="margin-top:1rem">
+                <div>
+                  <label for="menuChoice">Menu</label>
+                  <select id="menuChoice" name="menuChoice" required>
+                    <option value="">Choisir votre menu…</option>
+                    <option value="poisson">Menu poisson</option>
+                    <option value="viande">Menu viande</option>
+                    <option value="poulet">Menu poulet</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="messageInline">Message (optionnel)</label>
+                  <input id="messageInline" name="messageInline" placeholder="Un mot pour nous…" />
+                </div>
+              </div>
+              <div style="margin-top:1rem; display:flex; gap:.6rem; justify-content:flex-end; align-items:center">
+                <span id="formStatus" class="hint" aria-live="polite" style="margin-right:auto"></span>
+                <span class="hint">Attention c’est un VENDREDI !</span>
+                <button class="btn" id="submitBtn" type="submit">Envoyer</button>
+              </div>
             </div>
-
-            <div class="row">
-              <div>
-                <label for="fullName">Nom complet</label>
-                <input id="fullName" name="fullName" required autocomplete="name" placeholder="Votre nom complet" />
+            <div id="presenceSuccess" style="display:none; min-height:420px; align-items:center; justify-content:center; text-align:center; padding:2rem;">
+              <div style="max-width:520px; margin:0 auto;">
+                <h3 style="font-family:'Cinzel Decorative',serif; letter-spacing:.08em; text-transform:uppercase; font-size:1.5rem; margin-bottom:1rem; color:rgba(231,214,170,.95); text-align:center;">
+                  Merci
+                </h3>
+                <p style="font-size:1.18rem; line-height:1.8; color:rgba(255,255,255,.92); margin-bottom:1.4rem; text-align:center;">
+                  Votre présence a bien été enregistrée.
+                </p>
+                <div style="padding:1.2rem 1.1rem; border:1px solid rgba(231,214,170,.22); border-radius:16px; background:rgba(255,255,255,.04);">
+                  <p style="font-size:1.08rem; line-height:1.95; color:rgba(255,255,255,.90); text-align:center; margin:0;">
+                    « C'est pourquoi l'homme quittera son père et sa mère, et s'attachera à sa femme, et ils deviendront une seule chair. »
+                  </p>
+                  <p style="margin-top:.8rem; color:rgba(231,214,170,.92); letter-spacing:.06em; text-transform:uppercase; font-size:.92rem; text-align:center;">
+                    Genèse 2:24
+                  </p>
+                </div>
               </div>
-              <div>
-                <label for="phone">Téléphone</label>
-                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+32 ..." />
-              </div>
-            </div>
-
-            <div class="row" style="margin-top:1rem">
-              <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" autocomplete="email" placeholder="exemple@mail.com" />
-              </div>
-              <div>
-                <label for="attendance">Présence</label>
-                <select id="attendance" name="attendance" required>
-                  <option value="">Choisir…</option>
-                  <option value="matin">Cérémonie religieuse (11h)</option>
-                  <option value="soir">Soirée (19h)</option>
-                  <option value="journee">Toute la journée (11h + 19h)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="row" style="margin-top:1rem">
-              <div>
-                <label for="menuChoice">Menu</label>
-                <select id="menuChoice" name="menuChoice" required>
-                  <option value="">Choisir votre menu…</option>
-                  <option value="poisson">Menu poisson</option>
-                  <option value="viande">Menu viande</option>
-                  <option value="poulet">Menu poulet</option>
-                </select>
-              </div>
-              <div>
-                <label for="messageInline">Message (optionnel)</label>
-                <input id="messageInline" name="messageInline" placeholder="Un mot pour nous…" />
-              </div>
-            </div>
-
-            <div style="margin-top:1rem; display:flex; gap:.6rem; justify-content:flex-end; align-items:center">
-              <span id="formStatus" class="hint" aria-live="polite" style="margin-right:auto"></span>
-              <span class="hint">Attention c’est un VENDREDI !</span>
-              <button class="btn" id="submitBtn" type="submit">Envoyer</button>
             </div>
           </form>
-
           <div class="video-side card">
             <video src="assets/presence-side.mp4" playsinline autoplay muted loop preload="auto"></video>
           </div>
         </div>
       </div>
     </section>
-
     <hr class="divider"/>
-
     <section id="hotels" class="section-wrap section-light">
       <div class="container">
         <h2 class="section-title">Hôtels à proximité</h2>
         <p class="lead">Cliquez sur une carte pour ouvrir le site officiel.</p>
-
         <div class="grid two">
           <a class="card hotel-card" href="https://www.booking.com/hotel/be/mix-brussels-watermael-boitsfort.fr.html?aid=356980&label=gog235jc-10CAsoFUIqcmVzaWRlbmNlLWlubi1ieS1tYXJyaW90dC1icnVzc2Vscy1haXJwb3J0SDNYA2gViAEBmAEzuAEHyAEN2AED6AEB-AEBiAIBqAIBuAKB1sfNBsACAdICJGQ4YWFlMDUwLWQ4M2MtNDZhMy05NzFmLTEzMzE0YzZiNTY3OdgCAeACAQ&sid=b67ca01e3a135a37b8c2e93096cbf12d&all_sr_blocks=1010761905_373773292_2_42_0_911326&checkin=2026-09-17&checkout=2026-09-18&dest_id=10107619&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1010761905_373773292_2_42_0_911326&hpos=1&matching_block_id=1010761905_373773292_2_42_0_911326&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1010761905_373773292_2_42_0_911326_28480&srepoch=1773267953&srpvid=a8039db643eb01b6&type=total&ucfs=1&Anaia" target="_blank" rel="noopener">
             <div>
@@ -1354,7 +1308,6 @@
             </div>
             <div class="thumb"><img src="assets/hotel-mix-brussels.webp" alt="Mix Brussels" loading="lazy" decoding="async"></div>
           </a>
-
           <a class="card hotel-card" href="https://www.martinshotels.com/fr/page/martins-chateau-du-lac/martins-chateau-du-lac-hotel-5-genval-site-officiel.11057.html" target="_blank" rel="noopener">
             <div>
               <h3 style="font-size:1.35rem; letter-spacing:.04em">Martin's Château du Lac</h3>
@@ -1362,7 +1315,6 @@
             </div>
             <div class="thumb"><img src="assets/hotel-martins-chateau-du-lac.webp" alt="Martin's Château du Lac" loading="lazy" decoding="async"></div>
           </a>
-
           <a class="card hotel-card" href="https://www.booking.com/hotel/be/radisson-collection-the-national-brussels.fr.html?aid=356980&label=gog235jc-10CAsoFUIqcmVzaWRlbmNlLWlubi1ieS1tYXJyaW90dC1icnVzc2Vscy1haXJwb3J0SDNYA2gViAEBmAEzuAEHyAEN2AED6AEB-AEBiAIBqAIBuAKB1sfNBsACAdICJGQ4YWFlMDUwLWQ4M2MtNDZhMy05NzFmLTEzMzE0YzZiNTY3OdgCAeACAQ&sid=b67ca01e3a135a37b8c2e93096cbf12d&all_sr_blocks=1443385802_415844521_2_10_0&checkin=2026-09-17&checkout=2026-09-18&dest_id=14433858&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1443385802_415844521_2_10_0&hpos=1&matching_block_id=1443385802_415844521_2_10_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1443385802_415844521_2_10_0__20780&srepoch=1773267906&srpvid=385d9d9ee0a904eb&type=total&ucfs=1&" target="_blank" rel="noopener">
             <div>
               <h3 style="font-size:1.35rem; letter-spacing:.04em">Radisson Collection : The National Brussels</h3>
@@ -1370,7 +1322,6 @@
             </div>
             <div class="thumb"><img src="assets/hotel-radisson-national.webp" alt="Radisson Collection The National Brussels" loading="lazy" decoding="async"></div>
           </a>
-
           <a class="card hotel-card" href="https://www.booking.com/hotel/be/dolce-la-hulpe-brussels.fr.html?aid=356980&label=gog235jc-10CAsoFUIqcmVzaWRlbmNlLWlubi1ieS1tYXJyaW90dC1icnVzc2Vscy1haXJwb3J0SDNYA2gViAEBmAEzuAEHyAEN2AED6AEB-AEBiAIBqAIBuAKB1sfNBsACAdICJGQ4YWFlMDUwLWQ4M2MtNDZhMy05NzFmLTEzMzE0YzZiNTY3OdgCAeACAQ&sid=b67ca01e3a135a37b8c2e93096cbf12d&all_sr_blocks=2076911_246006879_2_42_0&checkin=2026-09-17&checkout=2026-09-18&dest_id=-1962879&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=2076911_246006879_2_42_0&hpos=1&matching_block_id=2076911_246006879_2_42_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=2076911_246006879_2_42_0__25900&srepoch=1773267843&srpvid=b6e99d7e7fff03a9&type=total&ucfs=1&" target="_blank" rel="noopener">
             <div>
               <h3 style="font-size:1.35rem; letter-spacing:.04em">Hotel Dolce La Hulpe Brussels</h3>
@@ -1378,7 +1329,6 @@
             </div>
             <div class="thumb"><img src="assets/hotel-dolce-la-hulpe.webp" alt="Hotel Dolce La Hulpe Brussels" loading="lazy" decoding="async"></div>
           </a>
-
           <a class="card hotel-card" href="https://www.booking.com/hotel/be/residence-inn-by-marriott-brussels-airport.fr.html?aid=356980&label=gog235jc-10CAsoFUIqcmVzaWRlbmNlLWlubi1ieS1tYXJyaW90dC1icnVzc2Vscy1haXJwb3J0SDNYA2gViAEBmAEzuAEHyAEN2AED6AEB-AEBiAIBqAIBuAKB1sfNBsACAdICJGQ4YWFlMDUwLWQ4M2MtNDZhMy05NzFmLTEzMzE0YzZiNTY3OdgCAeACAQ&sid=b67ca01e3a135a37b8c2e93096cbf12d&all_sr_blocks=701506701_288660473_2_41_0&checkin=2026-09-17&checkout=2026-09-18&dest_id=-1956993&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=701506701_288660473_2_41_0&hpos=1&matching_block_id=701506701_288660473_2_41_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=701506701_288660473_2_41_0__24295&srepoch=1773267758&srpvid=1f8e9d53d34602c5&type=total&ucfs=1&" target="_blank" rel="noopener">
             <div>
               <h3 style="font-size:1.35rem; letter-spacing:.04em">Residence Inn By Marriot Brussels Airport</h3>
@@ -1386,7 +1336,6 @@
             </div>
             <div class="thumb"><img src="assets/hotel-ibis-chatelain.webp" alt="ibis Brussels Centre Chatelain" loading="lazy" decoding="async"></div>
           </a>
-
           <a class="card hotel-card" href="https://www.aspria.com/" target="_blank" rel="noopener">
             <div>
               <h3 style="font-size:1.35rem; letter-spacing:.04em">Aspria Brussels</h3>
@@ -1397,9 +1346,7 @@
         </div>
       </div>
     </section>
-
     <hr class="divider"/>
-
     <section id="finale" class="section-wrap section-mid">
       <div class="container">
         <div class="card finale-magic" style="overflow:hidden">
@@ -1407,21 +1354,18 @@
         </div>
       </div>
     </section>
-
     <footer class="section-wrap section-dark">
       <div class="container">
         <p>© 2026 Jonathan & Naomy — Château Terblock,<strong>Sint-Jansbergdreef 2, Overijse 3090</strong>.</p>
       </div>
     </footer>
   </div>
-
   <div id="partyOverlay" aria-hidden="true">
     <div class="party-panel" role="dialog" aria-label="Connexion">
       <div class="party-header">
         <h3 style="font-family:'Cinzel Decorative',serif; letter-spacing:.10em; text-transform:uppercase">Connexion</h3>
         <button class="close-x" id="closeParty" aria-label="Fermer">✕</button>
       </div>
-
       <div class="party-body" id="pwStep">
         <div class="pw-wrap">
           <div class="pw-card" id="pwCard">
@@ -1434,17 +1378,14 @@
           </div>
         </div>
       </div>
-
       <div class="party-body hide" id="partyContent">
         <div class="tabs" role="tablist">
           <button class="active" data-tab="tab-flash" type="button">Flashmob (15 vidéos)</button>
           <button data-tab="tab-rappel" type="button">Rappel</button>
         </div>
-
         <div class="pane show" id="tab-flash" role="tabpanel">
           <div class="flash-grid" id="flashGrid"></div>
         </div>
-
         <div class="pane" id="tab-rappel" role="tabpanel">
           <div class="rappel-grid">
             <div class="rappel-card">
@@ -1459,7 +1400,6 @@
                 <li>Zéro drama, zéro pression, juste du cœur.</li>
               </ul>
             </div>
-
             <div class="rappel-card">
               <h4>Garçons d'honneur</h4>
               <p>
@@ -1473,7 +1413,6 @@
               </ul>
             </div>
           </div>
-
           <div class="rappel-wide">
             <h4>Un mot de nous</h4>
             <p>
@@ -1492,7 +1431,6 @@
       </div>
     </div>
   </div>
-
   <script>
     const body = document.body;
     const intro = document.getElementById('intro');
@@ -1500,7 +1438,6 @@
     const trailer = document.getElementById('trailer');
     const skipLink = document.getElementById('skipLink');
     const introLeft = document.getElementById('introLeft');
-
     function hideIntro(){
       intro.classList.add('fade-out');
       setTimeout(()=>{
@@ -1508,7 +1445,6 @@
         body.classList.remove('intro-active');
       }, 560);
     }
-
     function startTrailer(){
       if(introLeft){
         introLeft.classList.add('evap');
@@ -1517,29 +1453,23 @@
         trailer.currentTime = 0;
         trailer.muted = false;
       }catch(e){}
-
       const p = trailer.play();
       trailer.classList.add('playing');
-
       if(p && typeof p.then === 'function'){
         p.catch(()=>{
           trailer.muted = true;
           trailer.play().catch(()=>{});
         });
       }
-
       trailer.addEventListener('ended', hideIntro, { once:true });
-
       const fallback = setTimeout(hideIntro, 45000);
       trailer.addEventListener('loadedmetadata', ()=>{
         clearTimeout(fallback);
       }, { once:true });
     }
-
     if(playBtn){
       playBtn.addEventListener('click', startTrailer);
     }
-
     if(skipLink){
       skipLink.addEventListener('click', (e)=>{
         e.preventDefault();
@@ -1547,50 +1477,40 @@
         hideIntro();
       });
     }
-
     if(matchMedia('(prefers-reduced-motion: reduce)').matches){
       hideIntro();
     }
-
     function fmtTime(sec){
       sec = Math.max(0, sec || 0);
       const m = Math.floor(sec / 60);
       const s = Math.floor(sec % 60);
       return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
     }
-
     (function initAudioCards(){
       const cards = Array.from(document.querySelectorAll('.audio-card'));
       let current = null;
-
       cards.forEach(card=>{
         const btn = card.querySelector('.a-btn');
         const icon = btn ? btn.querySelector('path') : null;
         const audio = card.querySelector('audio');
         const fill = card.querySelector('.a-fill');
         const time = card.querySelector('.a-time');
-
         if(!btn || !icon || !audio || !fill || !time) return;
-
         const setPlayIcon = (isPlay)=>{
           icon.setAttribute('d', isPlay ? 'M8 5v14l11-7z' : 'M6 5h4v14H6zm8 0h4v14h-4z');
         };
-
         audio.addEventListener('loadedmetadata', ()=>{
           time.textContent = `${fmtTime(0)} / ${fmtTime(audio.duration)}`;
         }, { passive:true });
-
         audio.addEventListener('timeupdate', ()=>{
           const p = audio.duration ? (audio.currentTime / audio.duration) : 0;
           fill.style.width = `${(p * 100).toFixed(2)}%`;
           time.textContent = `${fmtTime(audio.currentTime)} / ${fmtTime(audio.duration)}`;
         }, { passive:true });
-
         audio.addEventListener('ended', ()=>{
           setPlayIcon(true);
           fill.style.width = '0%';
         }, { passive:true });
-
         btn.addEventListener('click', async ()=>{
           if(current && current !== audio){
             try{
@@ -1605,7 +1525,6 @@
               if(f) f.style.width = '0%';
             }
           }
-
           if(audio.paused){
             current = audio;
             setPlayIcon(false);
@@ -1621,7 +1540,6 @@
         });
       });
     })();
-
     const partyOverlay = document.getElementById('partyOverlay');
     const openParty = document.getElementById('openParty');
     const closeParty = document.getElementById('closeParty');
@@ -1630,7 +1548,6 @@
     const pwInput = document.getElementById('pwInput');
     const pwBtn = document.getElementById('pwBtn');
     const PASSWORD = "180926";
-
     function openPartyOverlay(e){
       if(e) e.preventDefault();
       if(!partyOverlay) return;
@@ -1639,7 +1556,6 @@
       document.documentElement.style.overflow = 'hidden';
       if(pwInput) pwInput.focus();
     }
-
     function closePartyOverlay(){
       if(!partyOverlay) return;
       partyOverlay.classList.remove('show');
@@ -1649,7 +1565,6 @@
       if(pwStep) pwStep.classList.remove('hide');
       if(partyContent) partyContent.classList.add('hide');
     }
-
     if(openParty){
       openParty.addEventListener('click', openPartyOverlay);
     }
@@ -1661,13 +1576,11 @@
         if(e.target === partyOverlay) closePartyOverlay();
       });
     }
-
     document.addEventListener('keydown', (e)=>{
       if(e.key === 'Escape' && partyOverlay && partyOverlay.classList.contains('show')){
         closePartyOverlay();
       }
     });
-
     if(pwBtn){
       pwBtn.addEventListener('click', ()=>{
         const ok = pwInput && pwInput.value.trim() === PASSWORD;
@@ -1688,7 +1601,6 @@
         injectFlashVideos();
       });
     }
-
     if(pwInput){
       pwInput.addEventListener('keydown', (e)=>{
         if(e.key === 'Enter' && pwBtn){
@@ -1696,7 +1608,6 @@
         }
       });
     }
-
     const tabs = document.querySelectorAll('.tabs button');
     tabs.forEach(btn=>{
       btn.addEventListener('click', ()=>{
@@ -1707,11 +1618,9 @@
         if(target) target.classList.add('show');
       });
     });
-
     function injectFlashVideos(){
       const grid = document.getElementById('flashGrid');
       if(!grid || grid.dataset.loaded === "1") return;
-
       let html = "";
       for(let i = 1; i <= 15; i++){
         const num = String(i).padStart(2,'0');
@@ -1725,12 +1634,12 @@
       grid.innerHTML = html;
       grid.dataset.loaded = "1";
     }
-
     const RSVP_ENDPOINT = "/api/rsvp";
     const presenceForm = document.getElementById('presenceForm');
     const formStatus = document.getElementById('formStatus');
     const submitBtn = document.getElementById('submitBtn');
-
+    const presenceFormContent = document.getElementById('presenceFormContent');
+    const presenceSuccess = document.getElementById('presenceSuccess');
     function setFormStatus(message, type = ""){
       if(!formStatus) return;
       formStatus.textContent = message;
@@ -1739,40 +1648,32 @@
       if(type === "success") formStatus.classList.add('form-status-success');
       if(type === "loading") formStatus.classList.add('form-status-loading');
     }
-
     function validateContact(){
       const email = document.getElementById('email').value.trim();
       const phone = document.getElementById('phone').value.trim();
       return !!(email || phone);
     }
-
     if(presenceForm){
       presenceForm.addEventListener('submit', async (e)=>{
         e.preventDefault();
-
         const honeypot = document.getElementById('website').value.trim();
         if(honeypot) return;
-
         const fullName = document.getElementById('fullName').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const email = document.getElementById('email').value.trim();
         const attendance = document.getElementById('attendance').value;
         const menuChoice = document.getElementById('menuChoice').value;
         const messageInline = document.getElementById('messageInline').value.trim();
-
         if(!fullName || !attendance || !menuChoice){
           setFormStatus("Veuillez compléter le nom, la présence et le menu.", "error");
           return;
         }
-
         if(!validateContact()){
           setFormStatus("Veuillez mettre au moins un contact : email ou téléphone.", "error");
           return;
         }
-
         submitBtn.disabled = true;
         setFormStatus("Envoi en cours…", "loading");
-
         const payload = {
           fullName,
           phone,
@@ -1783,31 +1684,20 @@
           submittedAt: new Date().toISOString(),
           source: "notre-septembre-site"
         };
-
         try{
           const res = await fetch(RSVP_ENDPOINT, {
             method:"POST",
             headers:{ "Content-Type":"application/json" },
             body: JSON.stringify(payload)
           });
-
           const data = await res.json().catch(()=>({}));
-
           if(!res.ok){
             throw new Error(data?.error || "send_failed");
           }
-
           presenceForm.reset();
-
-          const channels = [];
-          if(data.sentEmail) channels.push("email");
-          if(data.sentWhatsApp) channels.push("WhatsApp");
-
-          const channelText = channels.length
-            ? ` Une confirmation a été envoyée par ${channels.join(" et ")}.`
-            : "";
-
-          setFormStatus(`Merci. Votre réponse a bien été enregistrée.${channelText}`, "success");
+          if (presenceFormContent) presenceFormContent.style.display = "none";
+          if (presenceSuccess) presenceSuccess.style.display = "flex";
+          setFormStatus("", "");
         }catch(err){
           console.error(err);
           setFormStatus("Erreur d’envoi. Réessaie dans quelques secondes.", "error");
@@ -1816,12 +1706,10 @@
         }
       });
     }
-
     (function autoPauseLoopVideos(){
       if(!('IntersectionObserver' in window)) return;
       const vids = Array.from(document.querySelectorAll('video[autoplay][muted][loop]'));
       if(!vids.length) return;
-
       const io = new IntersectionObserver((entries)=>{
         for(const e of entries){
           const v = e.target;
@@ -1838,10 +1726,8 @@
         threshold:0.18,
         rootMargin:"220px 0px 220px 0px"
       });
-
       vids.forEach(v=>io.observe(v));
     })();
-
     (function warmCriticalAssets(){
       const criticalImages = [
         'assets/hero.webp',
@@ -1853,7 +1739,6 @@
         img.decoding = 'async';
         img.src = src;
       });
-
       const criticalAudio = [
         'assets/dresscode-01.m4a',
         'assets/dresscode-02.m4a',
