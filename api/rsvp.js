@@ -1,40 +1,153 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Notre Septembre. Notre rêve devenu réalité. Rejoignez-nous au Château Terblock le 18/09/2026." />
-  <meta name="theme-color" content="#07122d" />
-  <meta property="og:title" content="Notre Septembre — 18 Septembre 2026">
-  <meta property="og:description" content="Notre rêve devenu réalité. Château Terblock — 18/09/2026.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/cover-1200x630.jpg">
-  <meta name="twitter:card" content="summary_large_image">
+import { google } from "googleapis";
 
-  <link rel="preload" as="image" href="assets/cover-illustration.webp" fetchpriority="high">
-  <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
-  <link rel="preload" as="image" href="assets/dresscode-photo.webp">
-  <link rel="preload" as="video" href="assets/trailer.mp4" type="video/mp4">
-  <link rel="preload" as="video" href="assets/programme.mp4" type="video/mp4">
-  <link rel="preload" as="video" href="assets/presence-side.mp4" type="video/mp4">
-  <link rel="preload" as="audio" href="assets/dresscode-01.m4a">
-  <link rel="preload" as="audio" href="assets/dresscode-02.m4a">
-  <link rel="preload" as="audio" href="assets/dresscode-03.m4a">
-  <link rel="preload" as="audio" href="assets/dresscode-04.m4a">
+function normalizePhone(phone = "") {
+  let cleaned = phone.replace(/[^\d+]/g, "");
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  if (cleaned.startsWith("00")) {
+    cleaned = "+" + cleaned.slice(2);
+  }
 
-  <style>
-    :root{
-      --night:#07122d;
-      --night-2:#0b1a3d;
-      --mid:#0f2454;
-      --light:#143063;
-      --ink:rgba(255,255,255,.92);
-      --muted:rgba(223,230,255,.74);
-      --gold:#d7c08c;
+  if (!cleaned.startsWith("+")) {
+    if (cleaned.startsWith("0")) {
+      cleaned = "+32" + cleaned.slice(1);
+    } else {
+      cleaned = "+" + cleaned;
+    }
+  }
+
+  return cleaned;
+}
+
+function splitName(fullName = "") {
+  const clean = fullName.trim().replace(/\s+/g, " ");
+  const parts = clean.split(" ");
+
+  if (parts.length <= 1) {
+    return { firstName: clean, lastName: "" };
+  }
+
+  return {
+    firstName: parts.slice(0, -1).join(" "),
+    lastName: parts.slice(-1).join(" ")
+  };
+}
+
+function attendanceLabel(value = "") {
+  switch (value) {
+    case "matin":
+      return "Cérémonie religieuse (11h)";
+    case "soir":
+      return "Soirée (19h)";
+    case "journee":
+      return "Toute la journée (11h + 19h)";
+    default:
+      return value || "-";
+  }
+}
+
+function menuLabel(value = "") {
+  switch (value) {
+    case "poisson":
+      return "Menu poisson";
+    case "viande":
+      return "Menu viande";
+    case "poulet":
+      return "Menu poulet";
+    default:
+      return value || "-";
+  }
+}
+
+async function appendToGoogleSheet(row) {
+  const clientEmail = process.env.GOOGLE_CLIENT_EMAIL;
+  const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n");
+  const spreadsheetId = process.env.GOOGLE_SHEETS_SPREADSHEET_ID;
+  const sheetName = process.env.GOOGLE_SHEETS_TAB_NAME || "Feuille 1";
+
+  if (!clientEmail || !privateKey || !spreadsheetId) {
+    throw new Error("google_env_missing");
+  }
+
+  const auth = new google.auth.JWT({
+    email: clientEmail,
+    key: privateKey,
+    scopes: ["https://www.googleapis.com/auth/spreadsheets"]
+  });
+
+  const sheets = google.sheets({ version: "v4", auth });
+
+  await sheets.spreadsheets.values.append({
+    spreadsheetId,
+    range: `${sheetName}!A:L`,
+    valueInputOption: "USER_ENTERED",
+    requestBody: {
+      values: [row]
+    }
+  });
+}
+
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "method_not_allowed" });
+  }
+
+  try {
+    const {
+      fullName = "",
+      phone = "",
+      email = "",
+      attendance = "",
+      menuChoice = "",
+      messageInline = "",
+      submittedAt = new Date().toISOString(),
+      source = "notre-septembre-site"
+    } = req.body || {};
+
+    const cleanFullName = fullName.trim();
+    const cleanPhone = phone.trim();
+    const cleanEmail = email.trim();
+    const cleanAttendance = attendance.trim();
+    const cleanMenuChoice = menuChoice.trim();
+    const cleanMessageInline = messageInline.trim();
+
+    if (!cleanFullName || !cleanAttendance || !cleanMenuChoice) {
+      return res.status(400).json({ error: "missing_required_fields" });
+    }
+
+    if (!cleanPhone && !cleanEmail) {
+      return res.status(400).json({ error: "missing_contact" });
+    }
+
+    const { firstName, lastName } = splitName(cleanFullName);
+
+    await appendToGoogleSheet([
+      submittedAt,
+      cleanFullName,
+      firstName,
+      lastName,
+      cleanPhone ? normalizePhone(cleanPhone) : "",
+      cleanEmail,
+      attendanceLabel(cleanAttendance),
+      menuLabel(cleanMenuChoice),
+      cleanMessageInline,
+      source,
+      cleanEmail ? "oui" : "non",
+      cleanPhone ? "oui" : "non"
+    ]);
+
+    return res.status(200).json({
+      ok: true,
+      sentEmail: false,
+      sentWhatsApp: false
+    });
+  } catch (error) {
+    console.error("RSVP API error:", error);
+    return res.status(500).json({
+      error: "internal_error",
+      details: error.message || "unknown_error"
+    });
+  }
+}      --gold:#d7c08c;
       --gold-2:#bda06a;
       --glass:rgba(255,255,255,.055);
       --glass2:rgba(255,255,255,.03);
