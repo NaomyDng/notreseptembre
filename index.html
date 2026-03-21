@@ -18,6 +18,9 @@
   <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
   <link rel="preload" as="image" href="assets/intro-poster.jpg" fetchpriority="high">
   <link rel="preload" as="audio" href="assets/dresscode-01.m4a">
+  <link rel="preload" as="audio" href="assets/dresscode-02.m4a">
+  <link rel="preload" as="audio" href="assets/dresscode-03.m4a">
+  <link rel="preload" as="audio" href="assets/dresscode-04.m4a">
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -1012,7 +1015,7 @@
       overflow:hidden;
       border-radius:16px;
       position:relative;
-      max-width:420px;
+      max-width:340px;
       width:100%;
       margin-left:auto;
       align-self:start;
@@ -1021,7 +1024,7 @@
     .video-side video{
       width:100%;
       height:100%;
-      min-height:320px;
+      min-height:250px;
       object-fit:cover;
       filter:contrast(1.02) saturate(1.01);
       transition:transform .8s var(--ease),filter .6s var(--ease);
@@ -1560,6 +1563,10 @@
         background:none;
       }
 
+      .hero-media img{
+        object-position:center 18%;
+      }
+
       .hero-gradient{
         background:
           linear-gradient(
@@ -1710,12 +1717,13 @@
 
       .video-side{
         order:2;
-        max-width:100%;
-        margin-left:0;
+        max-width:300px;
+        margin-left:auto;
+        margin-right:auto;
       }
 
       .video-side video{
-        min-height:220px;
+        min-height:210px;
         height:auto;
       }
 
@@ -1858,6 +1866,14 @@
       .dress-photo-wrap img{
         max-width:78%;
         max-height:300px;
+      }
+
+      .video-side{
+        max-width:280px;
+      }
+
+      .video-side video{
+        min-height:190px;
       }
 
       .flash-grid video{
@@ -2081,6 +2097,51 @@
                 </div>
                 <audio preload="auto" src="assets/dresscode-01.m4a"></audio>
               </div>
+
+              <div class="audio-card">
+                <button class="a-btn" type="button" aria-label="Lire le vocal Dress code 2">
+                  <svg class="a-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </button>
+                <div>
+                  <div class="a-title">Vocal 02 — Exemples</div>
+                  <div class="a-sub">Vocal venue pour eteindre azui zéro</div>
+                  <div class="a-bar"><div class="a-fill"></div></div>
+                  <div class="a-time">00:00 / 00:00</div>
+                </div>
+                <audio preload="auto" src="assets/dresscode-02.m4a"></audio>
+              </div>
+
+              <div class="audio-card">
+                <button class="a-btn" type="button" aria-label="Lire le vocal Dress code 3">
+                  <svg class="a-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </button>
+                <div>
+                  <div class="a-title">Vocal 03 — Détails</div>
+                  <div class="a-sub">PROVOQUER LA FAMILLE D'en face</div>
+                  <div class="a-bar"><div class="a-fill"></div></div>
+                  <div class="a-time">00:00 / 00:00</div>
+                </div>
+                <audio preload="auto" src="assets/dresscode-03.m4a"></audio>
+              </div>
+
+              <div class="audio-card">
+                <button class="a-btn" type="button" aria-label="Lire le vocal Dress code 4">
+                  <svg class="a-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </button>
+                <div>
+                  <div class="a-title">Vocal 04 — Derniers détails</div>
+                  <div class="a-sub">Vocal supplémentaire pour compléter le dress code.</div>
+                  <div class="a-bar"><div class="a-fill"></div></div>
+                  <div class="a-time">00:00 / 00:00</div>
+                </div>
+                <audio preload="auto" src="assets/dresscode-04.m4a"></audio>
+              </div>
             </div>
           </div>
 
@@ -2103,7 +2164,7 @@
         <div class="grid two">
           <form id="presenceForm" class="card form-card" novalidate autocomplete="off">
             <div id="presenceFormContent">
-              <p class="notice-alert">L’INVITÉ N’INVITE PAS ET LES ENFANTS NE SONT PAS CONVIÉS.</p>
+              <p class="notice-alert">ATTENTION L’INVITÉ N’INVITE PAS ET LES ENFANTS NE SONT PAS CONVIÉS.</p>
 
               <div class="hp-field" aria-hidden="true">
                 <label for="website">Website</label>
@@ -2196,7 +2257,7 @@
     <section id="hotels" class="section-wrap section-light">
       <div class="container">
         <h2 class="section-title">Hôtels à proximité</h2>
-        <p class="lead">Cliquez sur une carte pour ouvrir le site officiel.</p>
+        <p class="lead">Cliquez sur un hôtel pour pouvoir réserver</p>
 
         <div class="grid two">
           <a class="card hotel-card" href="https://www.booking.com/hotel/be/mix-brussels-watermael-boitsfort.fr.html?aid=356980&label=gog235jc-10CAsoFUIqcmVzaWRlbmNlLWlubi1ieS1tYXJyaW90dC1icnVzc2Vscy1haXJwb3J0SDNYA2gViAEBmAEzuAEHyAEN2AED6AEB-AEBiAIBqAIBuAKB1sfNBsACAdICJGQ4YWFlMDUwLWQ4M2MtNDZhMy05NzFmLTEzMzE0YzZiNTY3OdgCAeACAQ&sid=b67ca01e3a135a37b8c2e93096cbf12d&all_sr_blocks=1010761905_373773292_2_42_0_911326&checkin=2026-09-17&checkout=2026-09-18&dest_id=10107619&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=1010761905_373773292_2_42_0_911326&hpos=1&matching_block_id=1010761905_373773292_2_42_0_911326&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1010761905_373773292_2_42_0_911326_28480&srepoch=1773267953&srpvid=a8039db643eb01b6&type=total&ucfs=1&Anaia" target="_blank" rel="noopener">
@@ -2236,15 +2297,15 @@
               <h3 style="font-size:1.35rem; letter-spacing:.04em;">Residence Inn By Marriot Brussels Airport</h3>
               <p style="color:rgba(223,230,255,.74);">17 min du Château</p>
             </div>
-            <div class="thumb"><img src="assets/hotel-ibis-chatelain.webp" alt="ibis Brussels Centre Chatelain" loading="lazy" decoding="async"></div>
+            <div class="thumb"><img src="assets/hotel-redisence.webp" alt="Résidence Inn By Marriott" loading="lazy" decoding="async"></div>
           </a>
 
-          <a class="card hotel-card" href="https://www.aspria.com/" target="_blank" rel="noopener">
+          <a class="card hotel-card" href="https://www.booking.com/hotel/be/obiswaterloocentre.fr.html?aid=356980&label=gog235jc-10CAsoFUISb2Jpc3dhdGVybG9vY2VudHJlSDNYA2gViAEBmAEzuAEHyAEN2AED6AEB-AEBiAIBqAIBuAK-xvnNBsACAdICJDdlMDFlYTMyLTQyODItNGU2ZS04Y2M1LTc1MmNmMTQ5YzBiZtgCAeACAQ&sid=b67ca01e3a135a37b8c2e93096cbf12d&dist=0&keep_landing=1&sb_price_type=total&type=total&chal_t=1774084926658&force_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noopener">
             <div>
-              <h3 style="font-size:1.35rem; letter-spacing:.04em;">Aspria Brussels</h3>
-              <p style="color:rgba(223,230,255,.74);">18 min du Château</p>
+              <h3 style="font-size:1.35rem; letter-spacing:.04em;">Ibis Brussels Waterloo</h3>
+              <p style="color:rgba(223,230,255,.74);">20 min du Château</p>
             </div>
-            <div class="thumb"><img src="assets/hotel-aspria.webp" alt="Aspria Brussels" loading="lazy" decoding="async"></div>
+            <div class="thumb"><img src="assets/hotel-ibis.webp" alt="Ibis Brussels Waterloo" loading="lazy" decoding="async"></div>
           </a>
         </div>
       </div>
@@ -2278,7 +2339,7 @@
         <div class="pw-wrap">
           <div class="pw-card" id="pwCard">
             <h3>Connexion</h3>
-            <p style="color:rgba(223,230,255,.78); margin-bottom:.8rem;">Veuillez entrer le mot de passe.</p>
+            <p style="color:rgba(223,230,255,.78); margin-bottom:.8rem;">Cette partie est réservée pour les demoiselles d'honneurs et garçons d'honneurs.</p>
             <div class="pw-row">
               <input class="pw-input" type="password" id="pwInput" placeholder="Mot de passe" autocomplete="current-password">
               <button class="btn" id="pwBtn" type="button">Entrer</button>
