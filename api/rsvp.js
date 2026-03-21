@@ -20,7 +20,7 @@ async function appendToGoogleSheet(row) {
 
   await sheets.spreadsheets.values.append({
     spreadsheetId,
-    range: `${sheetName}!A:L`,
+    range: `${sheetName}!A:J`,
     valueInputOption: "USER_ENTERED",
     requestBody: {
       values: [row]
@@ -56,8 +56,6 @@ export default async function handler(req, res) {
     await appendToGoogleSheet([
       submittedAt,
       fullName,
-      "",
-      "",
       phone,
       email,
       attendance,
